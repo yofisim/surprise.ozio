@@ -17,24 +17,27 @@ $(document).ready(function(){
     const squareWidth = tnkProp.width / 12;
     const squareHeight = tnkProp.height / 16.666667;
 
-    for(let i = 1; i<= 12; i++) {
+    // var spaceSquares = function ( n, sWidth, imgWidth ) {
+    //     let leftSpace = sWidth * (n-1);
+    //     if (leftSpace < imgWidth) {
+    //         $('#'+n+'').css({
+    //             'left': 'calc(15px + '+leftSpace+'px)'
+    //         });
+    //     }
+    // }
+
+
+    for (let i = 1; i<= 200; i++) {
         let squareHTML = $('<div class="square" id="'+i+'"><a href="#">'+i+'</a></div>');
         squareHTML.width(squareWidth);
         squareHTML.height(squareHeight);
-        $('#colContain').append(squareHTML);
-        if ( i === 1 ) {
-            $('#1').css('left', '15px');
-        } else {
-            let leftSpace = 92.5 * (i-1);
-            if (leftSpace < tnkProp.width) {
-                $('#'+i+'').css('left', 'calc(15px + '+leftSpace+'px)');
-            } else {
-                $('#'+i+'').hide();
-            }
 
-        }
+
+
     }
 
 
 
 });
+
+// $('#colContain').append(squareHTML);
