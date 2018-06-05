@@ -1,0 +1,16 @@
+#colContain {
+    position: relative;
+}
+
+#tnkImg {
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+.square {
+    z-index: 1;
+    background-color: goldenrod;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
