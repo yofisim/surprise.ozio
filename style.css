@@ -1,25 +1,41 @@
 #colContain {
     position: relative;
+    background: url('img/surprise.png') top no-repeat;
+    background-size: cover;
+    /*height: 100%;*/
+    /*padding-bottom: 87.7%;*/
+    max-width: 1000px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-#tnkImg {
-    position: relative;
-    width: 100%;
-    top: 0;
-}
 .square {
     z-index: 1;
-    background-color: goldenrod;
     display: inline-block;
-    position: absolute;
     top: 0;
+    width: 10%;
+}
+
+.square a {
+    display: block;
+    background-color: #1A2555;
+    border: 1px outset #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 11% 0;
+    transition: all .3s;
+}
+
+.square a:hover {
+    background-color: #FFFFFF;
+    color: #1A2555;
+    border: 1px outset #1A2555;
 }
 
 .rowed {
   display: block;
   margin: 0 auto;
   text-align: center;
-  position: absolute;
   top: 0;
   left: 0px;
   width: 100%;
