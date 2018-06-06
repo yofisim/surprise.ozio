@@ -1,10 +1,18 @@
+body {
+  background-color: #1d2d5f;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+}
+
 #colContain {
     position: relative;
     background: url('img/surprise.png') top no-repeat;
     background-size: cover;
-    /*height: 100%;*/
-    /*padding-bottom: 87.7%;*/
-    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
 }
@@ -18,18 +26,23 @@
 
 .square a {
     display: block;
-    background-image: url('/img/stone.png');
-    border: 1px outset #FFFFFF;
+    background-color: #1D2D5F;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 11% 0;
     transition: all .3s;
+    padding: 11% 0;
 }
 
 .square a:hover {
-    background-color: #FFFFFF;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
     color: #1A2555;
-    border: 1px outset #1A2555;
+    border: inherit;
+}
+
+a.cliked:hover {
+    background: none !important;
+    color: rgba(0,0,0,0) !important;
+    border: inherit !important;
 }
 
 .rowed {
@@ -39,4 +52,50 @@
   top: 0;
   left: 0px;
   width: 100%;
+}
+
+#yike {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.gradient-border {
+  --borderWidth: 1.5px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+.clicked::after {
+  display: none;
+  visibility: hidden;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
